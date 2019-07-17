@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600&display=swap");
+body {
+  background: #dcf5ff;
+  margin: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 25%;
+  border-radius: 10px;
+}
+
+.container .inner {
+  background: #00ff88;
+  padding: 1em;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-clip-path: circle(8% at 85% 18%);
+          clip-path: circle(8% at 85% 18%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.container .inner:hover {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+  border-radius: 10px;
+  background: #00b6ff;
+}
+
+.container .inner:hover span {
+  color: rgba(255, 255, 255, 0);
+}
+
+.container .inner span {
+  float: right;
+  margin-right: 11%;
+  font-weight: bold;
+  color: white;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.container .inner h1 {
+  color: white;
+  margin: 0;
+}
+
+.container .inner p {
+  color: white;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+/*# sourceMappingURL=main.css.map */
