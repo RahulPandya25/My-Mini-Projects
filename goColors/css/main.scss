@@ -121,6 +121,53 @@ header {
     width: 85%;
     background: var(--centre-frame-clr);
     mix-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .centreText {
+      position: relative;
+      height: 50%;
+      width: 70%;
+
+      .go,
+      .with,
+      .the,
+      .flow {
+        position: absolute;
+        color: var(--text-color);
+      }
+
+      .go {
+        font-weight: 600;
+        font-size: 144px;
+        line-height: 142%;
+      }
+
+      .with {
+        left: 220px;
+        top: 10px;
+        font-weight: normal;
+        font-size: 128.739px;
+        line-height: 142%;
+      }
+
+      .the {
+        left: 380px;
+        top: 150px;
+        font-weight: 600;
+        font-size: 64.3694px;
+        line-height: 122.5%;
+      }
+
+      .flow {
+        left: 500px;
+        top: 80px;
+        font-weight: 500;
+        font-size: 128.739px;
+        line-height: 179px;
+      }
+    }
   }
 
   .line1 {

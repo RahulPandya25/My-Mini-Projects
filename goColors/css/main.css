@@ -144,6 +144,59 @@ header .navbar li:hover a {
   width: 85%;
   background: var(--centre-frame-clr);
   mix-blend-mode: multiply;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .centerFrame .centreText {
+  position: relative;
+  height: 50%;
+  width: 70%;
+}
+
+.container .centerFrame .centreText .go,
+.container .centerFrame .centreText .with,
+.container .centerFrame .centreText .the,
+.container .centerFrame .centreText .flow {
+  position: absolute;
+  color: var(--text-color);
+}
+
+.container .centerFrame .centreText .go {
+  font-weight: 600;
+  font-size: 144px;
+  line-height: 142%;
+}
+
+.container .centerFrame .centreText .with {
+  left: 220px;
+  top: 10px;
+  font-weight: normal;
+  font-size: 128.739px;
+  line-height: 142%;
+}
+
+.container .centerFrame .centreText .the {
+  left: 380px;
+  top: 150px;
+  font-weight: 600;
+  font-size: 64.3694px;
+  line-height: 122.5%;
+}
+
+.container .centerFrame .centreText .flow {
+  left: 500px;
+  top: 80px;
+  font-weight: 500;
+  font-size: 128.739px;
+  line-height: 179px;
 }
 
 .container .line1 {
