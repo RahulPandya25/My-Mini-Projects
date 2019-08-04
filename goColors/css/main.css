@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+:root {
+  --text-color: rgba(12, 16, 54, 0.77);
+  --icon-clr-1: #2d9cdb;
+  --icon-clr-2: #eb5757;
+  --icon-clr-3: #f2c94c;
+  --vector-clr: #e6ea39;
+  --centre-frame-clr: rgba(191, 247, 240, 0.65);
+}
+
+html,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+  width: auto;
+  height: 80px;
+  padding: 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+header .logo .logo-icon {
+  width: 50px;
+  height: 15px;
+}
+
+header .logo .logo-icon circle {
+  fill-opacity: 0.9;
+}
+
+header .logo .logo-icon circle:nth-child(1) {
+  fill: var(--icon-clr-1);
+}
+
+header .logo .logo-icon circle:nth-child(2) {
+  fill: var(--icon-clr-2);
+}
+
+header .logo .logo-icon circle:nth-child(3) {
+  fill: var(--icon-clr-3);
+}
+
+header .logo .logo-text {
+  color: var(--text-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 142%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+header .logo .logo-text:hover {
+  color: black;
+}
+
+header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar li {
+  margin: 0 15px;
+  list-style: none;
+  position: relative;
+}
+
+header .navbar li::before {
+  position: absolute;
+  content: "";
+  height: 120%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+header .navbar li a {
+  text-decoration: none;
+  color: var(--text-color);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+header .navbar li:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header .navbar li:hover a {
+  color: black;
+  font-weight: 500;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .centerFrame {
+  height: 75%;
+  width: 85%;
+  background: var(--centre-frame-clr);
+  mix-blend-mode: multiply;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .centerFrame .centreText {
+  position: relative;
+  height: 50%;
+  width: 70%;
+}
+
+.container .centerFrame .centreText .go,
+.container .centerFrame .centreText .with,
+.container .centerFrame .centreText .the,
+.container .centerFrame .centreText .flow {
+  position: absolute;
+  color: var(--text-color);
+}
+
+.container .centerFrame .centreText .go {
+  font-weight: 600;
+  font-size: 144px;
+  line-height: 142%;
+}
+
+.container .centerFrame .centreText .with {
+  left: 220px;
+  top: 10px;
+  font-weight: normal;
+  font-size: 128.739px;
+  line-height: 142%;
+}
+
+.container .centerFrame .centreText .the {
+  left: 380px;
+  top: 150px;
+  font-weight: 600;
+  font-size: 64.3694px;
+  line-height: 122.5%;
+}
+
+.container .centerFrame .centreText .flow {
+  left: 500px;
+  top: 80px;
+  font-weight: 500;
+  font-size: 128.739px;
+  line-height: 179px;
+}
+
+.container .line1 {
+  position: absolute;
+}
+
+.container .line2 {
+  position: absolute;
+}
+
+.vector1 {
+  position: absolute;
+  top: -20px;
+  right: -240px;
+  width: 80%;
+  height: 80%;
+}
+
+.vector1 path {
+  fill: var(--vector-clr);
+  fill-opacity: 0.65;
+}
+
+.vector2 {
+  position: absolute;
+  bottom: -70px;
+  left: -40px;
+  width: 70%;
+  height: 80%;
+}
+
+.vector2 path {
+  fill: var(--vector-clr);
+  fill-opacity: 0.65;
+}
+/*# sourceMappingURL=main.css.map */
