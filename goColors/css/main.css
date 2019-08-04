@@ -6,6 +6,8 @@
   --icon-clr-3: #f2c94c;
   --vector-clr: #e6ea39;
   --centre-frame-clr: rgba(191, 247, 240, 0.65);
+  --arc-clr: #eb5757;
+  --tranistion: all 0.25s ease-in-out;
 }
 
 html,
@@ -42,9 +44,33 @@ header {
   z-index: 1;
 }
 
+header .logo:hover {
+  cursor: pointer;
+}
+
+header .logo:hover .logo-icon circle:nth-child(1) {
+  -webkit-animation: icon-spicy-move 0.3s ease-in-out 0s 1;
+          animation: icon-spicy-move 0.3s ease-in-out 0s 1;
+}
+
+header .logo:hover .logo-icon circle:nth-child(3) {
+  -webkit-animation: icon-spicy-move 0.3s ease-in-out 0.1s 1;
+          animation: icon-spicy-move 0.3s ease-in-out 0.1s 1;
+}
+
+header .logo:hover .logo-icon circle:nth-child(2) {
+  -webkit-animation: icon-spicy-move 0.3s ease-in-out 0.2s 1;
+          animation: icon-spicy-move 0.3s ease-in-out 0.2s 1;
+}
+
+header .logo:hover .logo-text {
+  color: black;
+}
+
 header .logo .logo-icon {
   width: 50px;
   height: 15px;
+  overflow: visible;
 }
 
 header .logo .logo-icon circle {
@@ -69,12 +95,9 @@ header .logo .logo-text {
   font-weight: normal;
   font-size: 24px;
   line-height: 142%;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-
-header .logo .logo-text:hover {
-  color: black;
+  -webkit-transition: var(--tranistion);
+  transition: var(--tranistion);
+  letter-spacing: -0.03em;
 }
 
 header .navbar {
@@ -87,6 +110,7 @@ header .navbar li {
   margin: 0 15px;
   list-style: none;
   position: relative;
+  cursor: pointer;
 }
 
 header .navbar li::before {
@@ -101,15 +125,15 @@ header .navbar li::before {
           box-sizing: border-box;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: var(--tranistion);
+  transition: var(--tranistion);
 }
 
 header .navbar li a {
   text-decoration: none;
   color: var(--text-color);
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: var(--tranistion);
+  transition: var(--tranistion);
 }
 
 header .navbar li:hover::before {
@@ -140,6 +164,7 @@ header .navbar li:hover a {
 }
 
 .container .centerFrame {
+  position: relative;
   height: 75%;
   width: 85%;
   background: var(--centre-frame-clr);
@@ -199,15 +224,18 @@ header .navbar li:hover a {
   line-height: 179px;
 }
 
-.container .line1 {
+.container .centerFrame .count {
   position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 44px;
+  letter-spacing: -0.025em;
+  color: #fff;
 }
 
-.container .line2 {
-  position: absolute;
-}
-
-.vector1 {
+.svgs .vector1 {
   position: absolute;
   top: -20px;
   right: -240px;
@@ -215,12 +243,12 @@ header .navbar li:hover a {
   height: 80%;
 }
 
-.vector1 path {
+.svgs .vector1 path {
   fill: var(--vector-clr);
   fill-opacity: 0.65;
 }
 
-.vector2 {
+.svgs .vector2 {
   position: absolute;
   bottom: -70px;
   left: -40px;
@@ -228,8 +256,94 @@ header .navbar li:hover a {
   height: 80%;
 }
 
-.vector2 path {
+.svgs .vector2 path {
   fill: var(--vector-clr);
   fill-opacity: 0.65;
+}
+
+.svgs .arc1 {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+  width: 400px;
+  height: 400px;
+  fill: none;
+}
+
+.svgs .arc1 path {
+  stroke: var(--arc-clr);
+  stroke-dasharray: 30 30;
+  stroke-opacity: 0.9;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.svgs .arc2 {
+  position: absolute;
+  bottom: -120px;
+  right: -100px;
+  width: 700px;
+  height: 350px;
+  fill: none;
+}
+
+.svgs .arc2 path {
+  stroke: var(--arc-clr);
+  stroke-dasharray: 30 30;
+  stroke-opacity: 0.9;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@-webkit-keyframes icon-spicy-move {
+  0% {
+    cy: 10.85;
+  }
+  50% {
+    cy: 0;
+  }
+  100% {
+    cy: 10.85;
+  }
+}
+
+@keyframes icon-spicy-move {
+  0% {
+    cy: 10.85;
+  }
+  50% {
+    cy: 0;
+  }
+  100% {
+    cy: 10.85;
+  }
+}
+
+@-webkit-keyframes shrink-n-grow {
+  0% {
+    letter-spacing: -0.03em;
+  }
+  50% {
+    letter-spacing: 0.035em;
+  }
+  100% {
+    letter-spacing: -0.03em;
+  }
+}
+
+@keyframes shrink-n-grow {
+  0% {
+    letter-spacing: -0.03em;
+  }
+  50% {
+    letter-spacing: 0.035em;
+  }
+  100% {
+    letter-spacing: -0.03em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

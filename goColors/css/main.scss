@@ -7,6 +7,8 @@
   --icon-clr-3: #f2c94c;
   --vector-clr: #e6ea39;
   --centre-frame-clr: rgba(191, 247, 240, 0.65);
+  --arc-clr: #eb5757;
+  --tranistion: all 0.25s ease-in-out;
 }
 
 html,
@@ -36,9 +38,29 @@ header {
   z-index: 1;
 
   .logo {
+    &:hover {
+      cursor: pointer;
+      .logo-icon {
+        circle:nth-child(1) {
+          animation: icon-spicy-move 0.3s ease-in-out 0s 1;
+        }
+        circle:nth-child(3) {
+          animation: icon-spicy-move 0.3s ease-in-out 0.1s 1;
+        }
+        circle:nth-child(2) {
+          animation: icon-spicy-move 0.3s ease-in-out 0.2s 1;
+        }
+      }
+      .logo-text {
+        // animation: shrink-n-grow 0.3s ease-in-out 0s 1;
+        color: black;
+      }
+    }
+
     .logo-icon {
       width: 50px;
       height: 15px;
+      overflow: visible;
 
       circle {
         fill-opacity: 0.9;
@@ -60,11 +82,8 @@ header {
       font-weight: normal;
       font-size: 24px;
       line-height: 142%;
-      transition: all 0.25s ease-in-out;
-
-      &:hover {
-        color: black;
-      }
+      transition: var(--tranistion);
+      letter-spacing: -0.03em;
     }
   }
 
@@ -74,6 +93,7 @@ header {
       margin: 0 15px;
       list-style: none;
       position: relative;
+      cursor: pointer;
 
       &::before {
         position: absolute;
@@ -85,13 +105,13 @@ header {
         border-bottom: 2px solid black;
         box-sizing: border-box;
         transform: scaleX(0);
-        transition: all 0.25s ease-in-out;
+        transition: var(--tranistion);
       }
 
       a {
         text-decoration: none;
         color: var(--text-color);
-        transition: all 0.25s ease-in-out;
+        transition: var(--tranistion);
       }
       &:hover {
         &::before {
@@ -117,6 +137,7 @@ header {
   justify-content: center;
 
   .centerFrame {
+    position: relative;
     height: 75%;
     width: 85%;
     background: var(--centre-frame-clr);
@@ -168,37 +189,102 @@ header {
         line-height: 179px;
       }
     }
-  }
 
-  .line1 {
-    position: absolute;
-  }
-
-  .line2 {
-    position: absolute;
-  }
-}
-
-.vector1 {
-  position: absolute;
-  top: -20px;
-  right: -240px;
-  width: 80%;
-  height: 80%;
-  path {
-    fill: var(--vector-clr);
-    fill-opacity: 0.65;
+    .count {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-weight: 500;
+      font-size: 44px;
+      line-height: 44px;
+      letter-spacing: -0.025em;
+      color: #fff;
+    }
   }
 }
 
-.vector2 {
-  position: absolute;
-  bottom: -70px;
-  left: -40px;
-  width: 70%;
-  height: 80%;
-  path {
-    fill: var(--vector-clr);
-    fill-opacity: 0.65;
+.svgs {
+  .vector1 {
+    position: absolute;
+    top: -20px;
+    right: -240px;
+    width: 80%;
+    height: 80%;
+    path {
+      fill: var(--vector-clr);
+      fill-opacity: 0.65;
+    }
+  }
+
+  .vector2 {
+    position: absolute;
+    bottom: -70px;
+    left: -40px;
+    width: 70%;
+    height: 80%;
+
+    path {
+      fill: var(--vector-clr);
+      fill-opacity: 0.65;
+    }
+  }
+
+  .arc1 {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    transform: rotate(6deg);
+    width: 400px;
+    height: 400px;
+    fill: none;
+    path {
+      stroke: var(--arc-clr);
+      stroke-dasharray: 30 30;
+      stroke-opacity: 0.9;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+
+  .arc2 {
+    position: absolute;
+    bottom: -120px;
+    right: -100px;
+    width: 700px;
+    height: 350px;
+    fill: none;
+    path {
+      stroke: var(--arc-clr);
+      stroke-dasharray: 30 30;
+      stroke-opacity: 0.9;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+}
+
+@keyframes icon-spicy-move {
+  0% {
+    cy: 10.85;
+  }
+  50% {
+    cy: 0;
+  }
+  100% {
+    cy: 10.85;
+  }
+}
+
+@keyframes shrink-n-grow {
+  0% {
+    letter-spacing: -0.03em;
+  }
+  50% {
+    letter-spacing: 0.035em;
+  }
+  100% {
+    letter-spacing: -0.03em;
   }
 }
