@@ -29,7 +29,8 @@
 
 // testing
 .test {
-  div:nth-child(1) {
+  div:nth-child(1),
+  div:nth-child(3) {
     height: 100vh;
     background: #0d4566;
   }
@@ -49,7 +50,7 @@ header {
   justify-content: space-between;
   color: var(--nav-text-clr-1);
   z-index: 1;
-
+  background: transparent;
   border-bottom: 2px solid var(--nav-clr-2);
   .logo {
     &:hover {
@@ -130,6 +131,22 @@ header {
         text-decoration: none;
         color: var(--nav-text-clr-1);
       }
+    }
+  }
+}
+
+.nav-scrolled {
+  color: var(--nav-text-clr-2);
+  background: var(--nav-clr-2);
+  border-bottom: 2px solid var(--nav-clr-1);
+  .navbar {
+    li {
+      &::before {
+        border-bottom: 2px solid var(--nav-text-clr-2);
+      }
+    }
+    .nav-links {
+      color: var(--nav-text-clr-2);
     }
   }
 }
