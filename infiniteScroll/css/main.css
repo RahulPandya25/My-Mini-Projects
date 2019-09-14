@@ -50,7 +50,7 @@ body {
 .images img {
   margin: 0.75rem;
   padding: 0.75rem;
-  width: 600px;
+  width: 900px;
   -webkit-box-shadow: 5px 8px 15px 0px rgba(12, 16, 54, 0.2);
           box-shadow: 5px 8px 15px 0px rgba(12, 16, 54, 0.2);
   -o-object-fit: cover;
@@ -61,5 +61,17 @@ footer {
   width: 100vw;
   height: 200px;
   background: transparent;
+}
+
+@media only screen and (max-width: 425px) {
+  .images img {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .images img {
+    width: 600px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
