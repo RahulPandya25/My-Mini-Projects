@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Nunito:400,600,700|Poppins:400,500,700&display=swap");
+
+:root {
+  --nav-clr-1: rgba(12, 16, 54, 0.77);
+  --nav-clr-2: #fff;
+  --nav-text-clr-1: white;
+  --nav-text-clr-2: black;
+  --tranistion: all 0.25s ease-in-out;
+
+  --text-color: rgba(12, 16, 54, 0.77);
+  --icon-clr-1: #2d9cdb;
+  --icon-clr-2: #f2c94c;
+  --icon-clr-3: #eb5757;
+  --vector-clr: #e6ea39;
+  --centre-frame-clr: rgba(191, 247, 240, 0.65);
+  --arc-clr: #eb5757;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+body {
+  width: 100vw;
+}
+
+.images {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // flex-wrap: wrap;
+
+  img {
+    margin: 0.75rem;
+    padding: 0.75rem;
+    width: 600px;
+    box-shadow: 5px 8px 15px 0px rgba(12, 16, 54, 0.2);
+    object-fit: cover;
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 200px;
+  background: transparent;
+}
